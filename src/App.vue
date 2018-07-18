@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="flex-box hug-flip-demo">
-      <hugCardFlip :flipData=flipData></hugCardFlip>
+      <hugCardFlip :flipOpts=flipOpts1></hugCardFlip>
     </div>
   </div>
 </template>
@@ -13,11 +13,13 @@ export default {
   name: 'App',
   data() {
     return {
-      flipData: {
-        width: 400,
-        height: 600,
+      flipOpts1: {
+        width: 200,
+        height: 300,
         front: require('./common/images/IMG_20180709_102521.jpg'),
-        back: require('./common/images/IMG_20180709_102526.jpg')
+        back: require('./common/images/IMG_20180709_102526.jpg'),
+        speed: 1.5,
+        axis: 'centerX'
       }
     };
   },
