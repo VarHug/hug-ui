@@ -3,15 +3,11 @@
     <div class="hug-flipper" :class="flipAxis" ref="hugFlipper">
       <div class="hug-flip-front" ref="flipFront">
         <!-- 正面内容 -->
-        <div class="img-wrapper">
-          <img :width=flipData.width :height=flipData.height :src=flipData.front>
-        </div>
+        <slot name="front" class="flip-slot"></slot>
       </div>
       <div class="hug-flip-back" ref="flipBack">
         <!-- 反面内容 -->
-        <div class="img-wrapper">
-          <img :width=flipData.width :height=flipData.height :src=flipData.back>
-        </div>
+        <slot name="back" class="flip-slot"></slot>
       </div>
     </div>
   </div>
@@ -29,8 +25,6 @@ export default {
       flipData: {
         width: 0,
         height: 0,
-        front: '',
-        back: '',
         speed: 1,
         axis: 'centerX'
       },
@@ -92,7 +86,6 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
 .hug-flip-container
-  margin 0 auto
 
   perspective 1000
 
@@ -132,4 +125,7 @@ export default {
 
       backface-visibility hidden
 
+      .flip-slot
+        width 100%
+        height 100%
 </style>

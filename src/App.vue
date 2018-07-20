@@ -1,7 +1,28 @@
 <template>
   <div id="app">
-    <div class="flex-box hug-flip-demo">
-      <hugCardFlip :flipOpts=flipOpts1></hugCardFlip>
+    <div class="hug-flip-demo">
+      <hugCardFlip :flipOpts=flipOpts1>
+        <div class="img-wrapper" slot="front">
+          <img width="200" height="300" src="./common/images/IMG_20180709_102521.jpg">
+        </div>
+        <div slot="back">
+          这是反面的内容插槽
+        </div>
+      </hugCardFlip>
+      <hugCardFlip :flipOpts=flipOpts2>
+        <div class="front-wrapper" slot="front">
+          <div class="img-wrapper">
+            <img width="400" height="600" src="./common/images/IMG_20180709_102521.jpg">
+          </div>
+          <h2 class="flip-title">Saber Cosplay Front</h2>
+        </div>
+        <div class="front-wrapper" slot="back">
+          <div class="img-wrapper">
+            <img width="400" height="600" src="./common/images/IMG_20180709_102526.jpg">
+          </div>
+          <h2 class="flip-title">Saber Cosplay Back</h2>
+        </div>
+      </hugCardFlip>
     </div>
   </div>
 </template>
@@ -16,10 +37,14 @@ export default {
       flipOpts1: {
         width: 200,
         height: 300,
-        front: require('./common/images/IMG_20180709_102521.jpg'),
-        back: require('./common/images/IMG_20180709_102526.jpg'),
         speed: 1.5,
         axis: 'centerX'
+      },
+      flipOpts2: {
+        width: 400,
+        height: 650,
+        speed: 1,
+        axis: 'left'
       }
     };
   },
@@ -30,6 +55,18 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-.flex-box
+.hug-flip-demo
   display flex
+  > div
+    margin 0 auto
+
+.img-wrapper
+  font-size 0
+.flip-title
+  text-align center
+  margin-top 20px
+  font-size 20px
+  font-weight 700
+  color #a7a0a2
+
 </style>
