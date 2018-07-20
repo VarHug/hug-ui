@@ -7,7 +7,7 @@ version: 开发版0.1
 <h3>card-flip</h3>
 <h4>Props</h4>
 <table>
-  <tr bgcolor='#999'>
+  <tr>
     <td>参数</td>
     <td>说明</td>
     <td>类型</td>
@@ -43,10 +43,12 @@ version: 开发版0.1
     <td>centerX</td>
   <tr>
 </table>
+
 <p>请确保内容区域宽度/高度(width/height)<font color="red">小于等于</font>卡片容器的宽度/高度(widht/height)<p>
 <h4>Slot</h4>
+
 <table>
-  <tr bgcolor='#999'>
+  <tr>
     <td>名字</td>
     <td>说明</td>
   </tr>
