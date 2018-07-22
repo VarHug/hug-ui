@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="hug-flip-demo">
+    <!-- <div class="hug-flip-demo">
       <hugCardFlip :flipOpts=flipOpts1>
         <div class="img-wrapper" slot="front">
           <img width="200" height="300" src="./common/images/IMG_20180709_102521.jpg">
@@ -23,12 +23,19 @@
           <h2 class="flip-title">Saber Cosplay Back</h2>
         </div>
       </hugCardFlip>
+    </div> -->
+    <div class="hug-carousel-demo">
+      <hugCarousel class="carousel" :carouselOpts=carouselOpts>
+      </hugCarousel>
+      <hugCarousel class="carousel" :carouselOpts=carouselOpts2>
+      </hugCarousel>
     </div>
   </div>
 </template>
 
 <script>
 import hugCardFlip from './components/hug-card-flip/hug-card-flip';
+import hugCarousel from './components/hug-carousel/hug-carousel.vue';
 
 export default {
   name: 'App',
@@ -45,11 +52,39 @@ export default {
         height: 650,
         speed: 1,
         axis: 'left'
+      },
+      carouselOpts: {
+        width: 240,
+        height: 160,
+        imagese: [
+          require('./common/images/3x2_1.jpg'),
+          require('./common/images/3x2_2.jpg'),
+          require('./common/images/3x2_3.jpg'),
+          require('./common/images/3x2_4.jpg'),
+          require('./common/images/3x2_5.jpg'),
+          require('./common/images/3x2_6.jpg'),
+          require('./common/images/3x2_7.jpg'),
+          require('./common/images/3x2_8.jpg'),
+          require('./common/images/3x2_9.jpg')
+        ]
+      },
+      carouselOpts2: {
+        width: 150,
+        height: 100,
+        imagese: [
+          require('./common/images/3x2_1.jpg'),
+          require('./common/images/3x2_2.jpg'),
+          require('./common/images/3x2_3.jpg'),
+          require('./common/images/3x2_4.jpg'),
+          require('./common/images/3x2_5.jpg'),
+          require('./common/images/3x2_6.jpg')
+        ]
       }
     };
   },
   components: {
-    hugCardFlip
+    hugCardFlip,
+    hugCarousel
   }
 };
 </script>
@@ -68,5 +103,14 @@ export default {
   font-size 20px
   font-weight 700
   color #a7a0a2
+
+.carousel
+  width 1000px
+  height 300px
+  padding 100px 50px
+  margin 0 auto
+
+.carousel:nth-child(2)
+  width 500px
 
 </style>
