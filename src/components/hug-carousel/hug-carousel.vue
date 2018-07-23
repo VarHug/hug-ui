@@ -32,7 +32,7 @@ export default {
   },
   created() {
     let opts = this.carouselOpts;
-    if (opts && opts.width && opts.height) {
+    if (opts && opts.width && opts.height && opts.data.image) {
       this.showFlag = true;
     }
   },
@@ -81,7 +81,9 @@ export default {
     },
     itemClickHandler(index) {
       if (index === this.curIndex) {
-        window.open(this.carouselOpts.data[index].link);
+        if (this.carouselOpts.data[index].link) {
+          window.open(this.carouselOpts.data[index].link);
+        }
       } else {
         let diff = index - this.curIndex;
         if ((diff > 0 && diff < this.itemsLen / 2) || diff < -this.itemsLen / 2) {
