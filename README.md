@@ -4,7 +4,7 @@ some personal components
 version: 开发版0.1
 
 ## 组件说明
-<h3>card-flip</h3>
+<h3>card-flip(旋转卡片)</h3>
 <h4>Props</h4>
 <table>
   <tr>
@@ -43,10 +43,9 @@ version: 开发版0.1
     <td>centerX</td>
   <tr>
 </table>
-
 <p>请确保内容区域宽度/高度(width/height)<font color="red">小于等于</font>卡片容器的宽度/高度(widht/height)<p>
-<h4>Slot</h4>
 
+<h4>Slot</h4>
 <table>
   <tr>
     <td>名字</td>
@@ -61,6 +60,45 @@ version: 开发版0.1
     <td>卡片区域反面的内容</td>
   </tr>
 </table>
+
+<h3>carousel(3D旋转木马走马灯)</h3>
+<h4>Props</h4>
+<table>
+  <tr>
+    <td>参数</td>
+    <td>说明</td>
+    <td>类型</td>
+    <td>可选值</td>
+    <td>默认值</td>
+    <td>示例</td>
+  <tr>
+  <tr>
+    <td>width</td>
+    <td>图片要设置的宽度</td>
+    <td>Number/String</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>图片要设置的高度</td>
+    <td>Number/String</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>传入carousel的数据，数组的长度决定了走马灯图片的总数，建议传入6-9张。每个数组的元素为一个对象。</td>
+    <td>Array</td>
+    <td>-</td>
+    <td>-</td>
+    <td>[{link:'',image:path}]</td>
+  </tr>
+</table>
+<p>图片要设置的宽度与高度<font color="red">并不等于</font>元素在浏览器中实际的宽度与高度<p>
+
 
 ## Build Setup
 
