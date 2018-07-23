@@ -56,28 +56,58 @@ export default {
       carouselOpts: {
         width: 240,
         height: 160,
-        imagese: [
-          require('./common/images/3x2_1.jpg'),
-          require('./common/images/3x2_2.jpg'),
-          require('./common/images/3x2_3.jpg'),
-          require('./common/images/3x2_4.jpg'),
-          require('./common/images/3x2_5.jpg'),
-          require('./common/images/3x2_6.jpg'),
-          require('./common/images/3x2_7.jpg'),
-          require('./common/images/3x2_8.jpg'),
-          require('./common/images/3x2_9.jpg')
+        data: [{
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_1.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_2.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_3.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_4.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_5.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_6.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_7.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_8.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_9.jpg')
+          }
         ]
       },
       carouselOpts2: {
         width: 150,
         height: 100,
-        imagese: [
-          require('./common/images/3x2_1.jpg'),
-          require('./common/images/3x2_2.jpg'),
-          require('./common/images/3x2_3.jpg'),
-          require('./common/images/3x2_4.jpg'),
-          require('./common/images/3x2_5.jpg'),
-          require('./common/images/3x2_6.jpg')
+        data: [{
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_1.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_2.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_3.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_4.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_5.jpg')
+          }, {
+            link: 'https://xxxxxx.com',
+            image: require('./common/images/3x2_6.jpg')
+          }
         ]
       }
     };
@@ -105,7 +135,7 @@ export default {
   color #a7a0a2
 
 .carousel
-  width 1000px
+  width 700px
   height 300px
   padding 100px 50px
   margin 0 auto
