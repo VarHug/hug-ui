@@ -32,7 +32,7 @@ export default {
   },
   created() {
     let opts = this.carouselOpts;
-    if (opts && opts.width && opts.height && opts.data.image) {
+    if (opts && opts.width && opts.height && opts.data) {
       this.showFlag = true;
     }
   },
